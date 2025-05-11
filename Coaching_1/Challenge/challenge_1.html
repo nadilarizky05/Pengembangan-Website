@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadila Amelia - Web Developer</title>
+
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #020814;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+            z-index: -1;
+            background-color: #020814;
+            background-blend-mode: screen;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38b6ff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #38b6ff;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 0 2rem;
+        }
+        
+        .profile-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(56, 182, 255, 0.3);
+        }
+        
+        .profile-image-container {
+            width: 250px;
+            height: 300px;
+            border: 3px solid #38b6ff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(56, 182, 255, 0.5);
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-content {
+            padding: 1rem 0 1rem 2rem;
+            flex: 1;
+        }
+        
+        .greeting {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .name {
+            color: #38b6ff;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .bio {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+    
+        
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            text-decoration: none;
+            position: relative;
+        }
+
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border: 2px solid #38b6ff;
+            border-radius: 12px;
+            background-color: rgba(56, 182, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .icon-box:hover {
+            background-color: rgba(56, 182, 255, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(56, 182, 255, 0.5);
+        }
+        
+        .icon-box::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(56, 182, 255, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .icon-box:hover::before {
+            opacity: 1;
+        }
+
+        .bx {
+            font-size: 30px;
+            color: #38b6ff;
+        }
+        
+        .icon-box:hover .bx {
+            animation: pulse 1.5s infinite;
+        }
+        .hire-btn {
+            display: inline-block;
+            background-color: rgba(56, 182, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #38b6ff;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .hire-btn:hover {
+            background-color: rgba(56, 182, 255, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(56, 182, 255, 0.4);
+        }
+        
+        .space-light {
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 800px;
+            background: linear-gradient(45deg, transparent, rgba(56, 182, 255, 0.1), transparent);
+            transform: rotate(35deg);
+            pointer-events: none;
+            z-index: -1;
+        }
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Nadila Amelia</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+       <div class="profile-card">
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Nadila Amelia" class="profile-image">
+            </div>
+            <div class="profile-content">
+                <h1 class="greeting">Hi, saya <span class="name">Nadila Amelia</span></h1>
+                <h2 class="title">Saya adalah Web Developer</h2>
+                <p class="bio">Hai! Saya Nadila Amelia, seorang mahasiswa S1 Sistem Informasi di Universitas Terbuka yang lagi semangat banget buat belajar Web Development. Saya punya ketertarikan yang besar di dunia ini dan sedang terus mengasah diri untuk membuat solusi digital yang solutif dan bermanfaat kedepannya.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">
+                        <div class="icon-box">
+                            <i class="bx bxl-linkedin"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <div class="icon-box">
+                            <i class="bx bxl-github"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <div class="icon-box">
+                            <i class="bx bxl-instagram"></i>
+                        </div>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <div class="icon-box">
+                            <i class="bx bxl-youtube"></i>
+                        </div>
+                    </a>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; Copyright 2025 Nadila Amelia</p>
+    </footer>
+</body>
+</html>
